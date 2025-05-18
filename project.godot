@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="GDHammer"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="GDHammer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gd_hammer_addon/plugin.cfg")
 
 [rendering]
 

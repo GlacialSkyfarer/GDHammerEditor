@@ -6,14 +6,21 @@ using System;
 public partial class GDHammer : EditorPlugin
 {
 
+    const string MAP_INIT_SCRIPT_PATH = "res://addons/gd_hammer_addon/nodes/MapInit.cs";
+    const string MAP_INIT_ICON_PATH = "res://addons/gd_hammer_addon/icons/icn_mapInit.svg";
+
     public override void _EnterTree()
     {
-        // Initialization of the plugin goes here.
+
+        Script mapInitScript = GD.Load<Script>(MAP_INIT_SCRIPT_PATH);
+        Texture2D mapInitIcon = GD.Load<Texture2D>(MAP_INIT_ICON_PATH);
+        AddCustomType("MapInit", "Node3D", mapInitScript, mapInitIcon);
+
     }
 
     public override void _ExitTree()
     {
-        // Clean-up of the plugin goes here.
+        RemoveCustomType("MapInit");
     }
 
 }
