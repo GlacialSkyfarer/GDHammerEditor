@@ -7,7 +7,7 @@ ambient_light_color = Color(0.219501, 0.219501, 0.219501, 1)
 
 [node name="MapInit" type="Node3D"]
 script = ExtResource("1_460p5")
-map = Object(Object,"script":Resource("res://addons/gd_hammer_addon/GDHMap.cs"),"brushes":Array[null]([]))
+map = Object(Object,"script":Resource("res://addons/gd_hammer_addon/GDHMap.cs"),"brushes":[])
 
 
 [node name="Camera3D" type="Camera3D" parent="."]
